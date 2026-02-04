@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "kwYJXu33TFQ=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "An invalid cache entry was found for URL 'https://nexus-dev.onefiserv.net/repository/nuget.org-v3/FindPackagesById()?id='Microsoft.Web.WebView2'&semVerLevel=2.0.0' and will be replaced.\r\nValue cannot be null or an empty string. (Parameter 'value')",
+      "projectPath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Web.WebView2' from remote source 'https://nexus-dev.onefiserv.net/repository/nuget.org-v3/FindPackagesById()?id='Microsoft.Web.WebView2'&semVerLevel=2.0.0'.\r\n  Value cannot be null or an empty string. (Parameter 'value')",
+      "projectPath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "filePath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "libraryId": "Microsoft.Web.WebView2",
+      "targetGraphs": []
+    }
+  ]
+}

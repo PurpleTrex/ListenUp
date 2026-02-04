@@ -1,0 +1,46 @@
+﻿<Window x:Class="ListenUp.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListenUp.App"
+        mc:Ignorable="d"
+        Title="ListenUp (WPF)" Height="600" Width="960">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel Orientation="Vertical" Margin="12" DockPanel.Dock="Top" >
+            <TextBlock Text="ListenUp (WPF fallback while WinUI templates are unavailable)" FontSize="18" FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,4" >
+                <TextBox Width="360" Margin="0,0,8,0" Text="{Binding Query, UpdateSourceTrigger=PropertyChanged}" ToolTip="Search books or authors" />
+                <Button Width="100" Content="Search" Click="OnSearch" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}, FallbackValue=True}" />
+            </StackPanel>
+            <TextBlock Text="{Binding Status}" Foreground="DarkSlateGray" />
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Results}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#DDD" BorderThickness="1" CornerRadius="6" Padding="8" Margin="8">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="16" />
+                                <TextBlock Text="{Binding AuthorDisplay}" Foreground="Gray" />
+                                <StackPanel Orientation="Horizontal" Margin="0,6,0,6" Spacing="8">
+                                    <TextBlock Text="Text" Visibility="{Binding HasText, Converter={StaticResource BoolToVisibilityConverter}}" Background="#FFEFEF" Padding="4,2" />
+                                    <TextBlock Text="Audio" Visibility="{Binding HasAudio, Converter={StaticResource BoolToVisibilityConverter}}" Background="#E6F4FF" Padding="4,2" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <Button Content="Read" Click="OnRead" IsEnabled="{Binding HasText}" />
+                                    <Button Content="Listen" Click="OnListen" IsEnabled="{Binding HasAudio}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

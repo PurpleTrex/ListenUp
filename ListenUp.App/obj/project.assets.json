@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Microsoft.Web.WebView2 >= 1.0.2592.51"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\FCMP4D4\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "projectName": "ListenUp.App",
+      "projectPath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\ListenUp.App.csproj",
+      "packagesPath": "C:\\Users\\FCMP4D4\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\ListenUp.App\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\FCMP4D4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nexus-dev.onefiserv.net/repository/nuget.org-v3/": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\PublicDomain\\PublicDomain.csproj": {
+              "projectPath": "C:\\Users\\FCMP4D4\\Desktop\\ListenUP!\\PublicDomain\\PublicDomain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Microsoft.Web.WebView2": {
+            "target": "Package",
+            "version": "[1.0.2592.51, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "An invalid cache entry was found for URL 'https://nexus-dev.onefiserv.net/repository/nuget.org-v3/FindPackagesById()?id='Microsoft.Web.WebView2'&semVerLevel=2.0.0' and will be replaced.\r\nValue cannot be null or an empty string. (Parameter 'value')"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.Web.WebView2' from remote source 'https://nexus-dev.onefiserv.net/repository/nuget.org-v3/FindPackagesById()?id='Microsoft.Web.WebView2'&semVerLevel=2.0.0'.\r\n  Value cannot be null or an empty string. (Parameter 'value')",
+      "libraryId": "Microsoft.Web.WebView2"
+    }
+  ]
+}
