@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace ListenUp.App;
+namespace ListenUp.App.Windows;
 
 public partial class ReaderWindow : Window
 {

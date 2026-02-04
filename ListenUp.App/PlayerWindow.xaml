@@ -4,13 +4,56 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Player" Height="200" Width="400">
-    <Grid Margin="12">
+        Title="Audio Player" Height="260" Width="450">
+    <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="TrackLabel" FontWeight="Bold" />
-        <MediaElement x:Name="Player" Grid.Row="1" LoadedBehavior="Manual" UnloadedBehavior="Stop" />
+        
+        <!-- Title -->
+        <TextBlock x:Name="TrackLabel" Grid.Row="0" FontWeight="Bold" FontSize="16" TextWrapping="Wrap" Margin="0,0,0,16" />
+        
+        <!-- Progress Bar -->
+        <Grid Grid.Row="1" Margin="0,0,0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="CurrentTime" Grid.Column="0" Text="0:00" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <Slider x:Name="ProgressSlider" Grid.Column="1" Minimum="0" Maximum="100" 
+                    ValueChanged="OnProgressChanged" IsMoveToPointEnabled="True"/>
+            <TextBlock x:Name="TotalTime" Grid.Column="2" Text="0:00" VerticalAlignment="Center" Margin="8,0,0,0"/>
+        </Grid>
+        
+        <!-- Controls -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,12">
+            <Button x:Name="PlayPauseButton" Content="▶ Play" Click="OnPlayPause" Width="100" Padding="8,6" Margin="0,0,8,0"/>
+            <Button Content="⏹ Stop" Click="OnStop" Width="80" Padding="8,6" Margin="0,0,8,0"/>
+            <Button Content="⏪ -10s" Click="OnSeekBack" Width="70" Padding="8,6" Margin="0,0,8,0"/>
+            <Button Content="⏩ +10s" Click="OnSeekForward" Width="70" Padding="8,6"/>
+        </StackPanel>
+        
+        <!-- Volume -->
+        <Grid Grid.Row="3" Margin="0,0,0,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="🔊 Volume:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <Slider x:Name="VolumeSlider" Grid.Column="1" Minimum="0" Maximum="1" Value="0.7" 
+                    ValueChanged="OnVolumeChanged" IsMoveToPointEnabled="True"/>
+        </Grid>
+        
+        <!-- Status -->
+        <TextBlock x:Name="StatusText" Grid.Row="4" Foreground="Gray" FontSize="11" TextAlignment="Center"/>
+        
+        <!-- Hidden MediaElement -->
+        <MediaElement x:Name="Player" Visibility="Collapsed" LoadedBehavior="Manual" UnloadedBehavior="Stop" 
+                      MediaOpened="OnMediaOpened" MediaEnded="OnMediaEnded"/>
     </Grid>
 </Window>

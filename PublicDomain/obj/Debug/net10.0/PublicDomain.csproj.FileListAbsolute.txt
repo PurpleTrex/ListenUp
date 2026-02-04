@@ -1,0 +1,12 @@
+/workspaces/ListenUp/PublicDomain/bin/Debug/net10.0/PublicDomain.deps.json
+/workspaces/ListenUp/PublicDomain/bin/Debug/net10.0/PublicDomain.dll
+/workspaces/ListenUp/PublicDomain/bin/Debug/net10.0/PublicDomain.pdb
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.AssemblyInfoInputs.cache
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.AssemblyInfo.cs
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.csproj.CoreCompileInputs.cache
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.sourcelink.json
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.dll
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/refint/PublicDomain.dll
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/PublicDomain.pdb
+/workspaces/ListenUp/PublicDomain/obj/Debug/net10.0/ref/PublicDomain.dll
